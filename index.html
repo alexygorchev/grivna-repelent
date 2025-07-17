@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="bg">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Смарт Гривна Против Насекоми</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2563eb;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 9999px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      font-weight: bold;
+      z-index: 100;
+      transition: background-color 0.3s;
+    }
+    .floating-button:hover {
+      background-color: #1e40af;
+    }
+    .animate-pulse-highlight {
+      animation: pulse-highlight 2s infinite;
+    }
+    @keyframes pulse-highlight {
+      0%, 100% { color: #1d4ed8; transform: scale(1); }
+      50% { color: #2563eb; transform: scale(1.05); }
+    }
+  
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+
+@keyframes smash-x {
+  0% {
+    transform: translateY(-100%) scale(2);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10%) scale(1.2);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-5%) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+.smash-animated-x {
+  animation: smash-x 0.8s ease-out forwards;
+}
+</style>
+<style>
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-out both;
+}
+</style></head>
+<body class="bg-white text-gray-800 font-sans">
+<section class="bg-yellow-100 py-12 px-6 text-center shadow-md animate-fade-in">
+<h1 class="text-5xl md:text-6xl font-extrabold mb-6 text-blue-800 animate-pulse-highlight drop-shadow-lg">ЗАБРАВИ УХАПВАНИЯТА ТОВА ЛЯТО</h1>
+<p class="text-xl md:text-2xl text-gray-800 mb-8 font-medium leading-relaxed animate-fade-in">Стотици вече се защитиха – без химия, без ухапвания. <strong>Смарт гривна</strong> с клинично доказан ефект!</p>
+<div class="flex flex-wrap justify-center gap-3 mb-6"><div class="relative inline-block text-center"><span class="text-xl md:text-2xl font-bold bg-red-100 text-red-800 px-4 py-2 rounded shadow-md">КЪРЛЕЖИ</span><span class="absolute inset-0 flex items-center justify-center text-4xl font-extrabold text-red-700 opacity-90 pointer-events-none smash-animated-x">✖</span></div><div class="relative inline-block text-center"><span class="text-xl md:text-2xl font-bold bg-red-100 text-red-800 px-4 py-2 rounded shadow-md">КОМАРИ</span><span class="absolute inset-0 flex items-center justify-center text-4xl font-extrabold text-red-700 opacity-90 pointer-events-none smash-animated-x">✖</span></div><div class="relative inline-block text-center"><span class="text-xl md:text-2xl font-bold bg-red-100 text-red-800 px-4 py-2 rounded shadow-md">БЪЛХИ</span><span class="absolute inset-0 flex items-center justify-center text-4xl font-extrabold text-red-700 opacity-90 pointer-events-none smash-animated-x">✖</span></div></div>
+<a class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 transition ml-6" href="#order-form" onclick="document.querySelector('select[name=quantity]').value = '3';" title="Поръчай 3 броя гривни - най-добра оферта">Поръчай сега</a>
+</section>
+<section class="py-10 px-4 bg-white max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+<div class="md:w-1/2">
+<ul class="space-y-3 text-lg">
+<li>✅ Единствена на пазара клинично доказана защита от кърлежи, бълхи, комари, мухи и други</li>
+<li>✅ Вградена ултразвукова към която насекомите изпитват вродена непоносимост</li>
+<li>✅ Смарт функция – показва дата и час на дисплея</li>
+<li>✅ Удобна и лека – носи се като обикновен часовник</li>
+<li>✅ Дълъг живот на батерията – не изисква често зареждане</li>
+<li>✅ Подходяща за всякакви дейности – къмпинг, разходки, двор, планина, пикник, сън</li>
+<li>✅ Модерен дизайн – стилна и незабележима</li>
+<li>✅ Напълно безопасна – без химикали, клинично тествана, подходяща за деца, възрастни и домашни любимци</li>
+</ul>
+</div>
+<div class="md:w-1/2 flex flex-row gap-6 items-center">
+<div class="relative flex-shrink-0 max-w-md">
+<img alt="Гривна основна" class="rounded-lg shadow-md w-full object-contain max-h-[440px]" src="Grivna_BG_3_with_logo.png"/>
+</div>
+<div class="flex flex-col justify-between h-[440px]">
+<img alt="Снимка 1" class="w-24 h-24 object-cover rounded shadow cursor-pointer hover:scale-105 transition" onclick="openLightbox(this.src)" src="c73914aa-8888-447f-8505-0bb7ef8ad9b6.png"/>
+<img alt="Снимка 2" class="w-24 h-24 object-cover rounded shadow cursor-pointer hover:scale-105 transition" onclick="openLightbox(this.src)" src="ef8e0580-e393-4279-9b2c-9434f1d58079.png"/>
+<img alt="Снимка 3" class="w-24 h-24 object-cover rounded shadow cursor-pointer hover:scale-105 transition" onclick="openLightbox(this.src)" src="Grivna BG 1.bmp"/>
+<img alt="Снимка 4" class="w-24 h-24 object-cover rounded shadow cursor-pointer hover:scale-105 transition" onclick="openLightbox(this.src)" src="Grivna BG 2.bmp"/>
+<img alt="Снимка 5" class="w-24 h-24 object-cover rounded shadow cursor-pointer hover:scale-105 transition" onclick="openLightbox(this.src)" src="Grivna_BG_4_with_logo.png"/>
+<img alt="Снимка 6" class="w-24 h-24 object-cover rounded shadow cursor-pointer hover:scale-105 transition" onclick="openLightbox(this.src)" src="scientist_logo_top_left_blended.png"/>
+</div>
+</div>
+</section>
+<section class="py-10 px-4 bg-white text-center scale-110" id="order">
+<h2 class="text-2xl font-bold mb-4 text-3xl font-extrabold text-blue-800 text-center mb-6">Избери брой гривни</h2>
+<div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+<div class="border p-6 rounded shadow">
+<h3 class="text-xl font-semibold text-xl font-semibold text-gray-900 mb-2">1 брой</h3>
+<p class="text-2xl font-bold">24,99 лв.</p>
+<a class="mt-6 block w-full text-xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 text-white py-4 rounded-full shadow-xl transform hover:scale-105 transition duration-300" data-quantity="1" href="#order-form">Поръчай 1 бр. гривна</a></div>
+<div class="border p-6 rounded shadow">
+<h3 class="text-xl font-semibold text-xl font-semibold text-gray-900 mb-2">2 броя</h3>
+<p class="text-2xl font-bold">39,99 лв.</p>
+<a class="mt-6 block w-full text-xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 text-white py-4 rounded-full shadow-xl transform hover:scale-105 transition duration-300" data-quantity="2" href="#order-form">Поръчай 2 броя гривни</a></div>
+<div class="border p-6 rounded shadow border-green-500">
+<h3 class="text-xl font-semibold text-green-700 text-xl font-semibold text-gray-900 mb-2">3 броя</h3>
+<p class="text-2xl font-bold text-green-700">54,99 лв.</p>
+<a class="mt-6 block w-full text-xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 text-white py-4 rounded-full shadow-xl transform hover:scale-105 transition duration-300" data-quantity="3" href="#order-form">Поръчай 3 броя гривни</a></div>
+</div>
+</section>
+<div class="text-center font-bold text-2xl my-6 animate-pulse text-red-700 font-extrabold bg-yellow-100 py-3 rounded shadow" id="countdown">⚠️ Побързай! Офертата изтича след: <span id="timer">00:15:00</span></div>
+<script>
+    let timeLeft = 15 * 60;
+    const timerEl = document.getElementById("timer");
+    const formatTime = (t) => `${String(Math.floor(t/60)).padStart(2,'0')}:${String(t%60).padStart(2,'0')}`;
+    setInterval(() => {
+      if (timeLeft > 0) {
+        timeLeft--;
+        timerEl.textContent = formatTime(timeLeft);
+      }
+    }, 1000);
+  </script>
+<section class="py-10 px-4 bg-white max-w-6xl mx-auto r e l a t i v e o v e r f l o w - h i d d e n" style="max-width: 100%; position: relative;">
+</section>
+
+<section class="py-10 px-4 bg-white max-w-4xl mx-auto">
+<h2 class="text-2xl font-bold text-center mb-6 text-3xl font-extrabold text-blue-800 text-center mb-6">Какво казват клиентите:</h2>
+<div class="space-y-6"><div class="relative overflow-hidden"><button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-2 rounded-l hover:bg-blue-700" onclick="prevSlide()">&lt;</button><div class="flex transition-transform duration-500 ease-in-out" id="testimonial-slider"><div class="bg-gray-100 p-4 rounded shadow min-w-full px-4">
+<p class="text-yellow-500">★★★★★</p>
+<p>„Гривната наистина действа. Бяхме на къмпинг и никой не беше ухапан!“</p>
+<p class="text-sm text-gray-600">— Мария Т.</p>
+</div><div class="bg-gray-100 p-4 rounded shadow min-w-full px-4">
+<p class="text-yellow-500">★★★★★</p>
+<p>„Използвам я всеки ден при разходка с кучето. Бълхите почти изчезнаха .“</p>
+<p class="text-sm text-gray-600">— Георги С.</p>
+</div><div class="bg-gray-100 p-4 rounded shadow min-w-full px-4">
+<p class="text-yellow-500">★★★★☆</p>
+<p>„Малко е по-голяма от часовник, но свикваш. Без комари на беседката в градината!“</p>
+<p class="text-sm text-gray-600">— Петя В.</p>
+</div><div class="bg-yellow-100 p-5 rounded shadow-md scale-105 border-2 border-yellow-400 min-w-full px-4"><p class="text-yellow-500 text-xl">★★★★★</p><p>„Окачих гривната на количката на бебето – нито едно ухапване! Изключително съм доволна.“</p><p class="text-sm text-gray-700 font-semibold">— Милена Р.</p></div><div class="bg-gray-100 p-5 rounded shadow-md min-w-full px-4">
+<p class="text-yellow-500 text-xl">★★★★★</p>
+<p>„Моят син я носи с гордост, мисли я за часовник! Освен че го предпазва от ухапвания, забавлява се с нея.“</p>
+<p class="text-sm text-gray-600">— Цветелина Д.</p>
+</div><div class="bg-gray-100 p-5 rounded shadow-md min-w-full px-4">
+<p class="text-yellow-500 text-xl">★★★★★</p>
+<p>„Дъщеря ми си играе с гривната постоянно – казва, че е нейният „антикомарен часовник“. Много сме доволни!“</p>
+<p class="text-sm text-gray-600">— Станимир К.</p>
+</div><div class="bg-gray-100 p-5 rounded shadow min-w-full px-4"><p class="text-yellow-500 text-xl">★★★★☆</p><p>„Ползвах гривната по време на разходки в парка. Май върши работа – не съм бил ухапан, но не мога да кажа със 100% сигурност.“</p><p class="text-sm text-gray-700 font-semibold">— Николай П.</p></div><div class="bg-gray-100 p-5 rounded shadow min-w-full px-4"><p class="text-yellow-500 text-xl">★★★☆☆</p><p>„Дизайнът е приятен, но ултразвуковият звук е леко дразнещ за мен. Жена ми обаче е доволна и не го чува.“</p><p class="text-sm text-gray-700 font-semibold">— Христо Г.</p></div><div class="bg-gray-100 p-5 rounded shadow min-w-full px-4"><p class="text-yellow-500 text-xl">★★★★★</p><p>„Съмнявах се първоначално, но след уикенд в планината без нито едно ухапване, съм впечатлена. Ще поръчам и за децата.“</p><p class="text-sm text-gray-700 font-semibold">— Елена Ж.</p></div></div><button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-2 rounded-r hover:bg-blue-700" onclick="nextSlide()">&gt;</button></div></div>
+</section>
+<section class="py-10 px-4 bg-white max-w-4xl mx-auto">
+<h2 class="text-2xl font-bold text-center mb-6 text-3xl font-extrabold text-blue-800 text-center mb-6">Често задавани въпроси</h2>
+<div class="space-y-4">
+<div>
+<h3 class="font-semibold text-xl font-semibold text-gray-900 mb-2">Защо да избера точно тази гривна?</h3>
+<p>Освен че е сертифицирана по най-високи европейски стандарти, тя е напълно безопасна, без химикали и клинично тествана.</p>
+</div>
+<div>
+<h3 class="font-semibold text-xl font-semibold text-gray-900 mb-2">Какво отличава тази гривна от други подобни продукти?</h3>
+<p>Това е единствената смарт гривна на българския пазар, която използва ултразвукова технология за защита не само от комари, но и от кърлежи и бълхи.</p>
+</div>
+<div>
+<h3 class="font-semibold text-xl font-semibold text-gray-900 mb-2">Какво представлява TÜV NORD сертификацията?</h3>
+<p>Това е независима сертификация от реномиран немски орган, гарантиращ безопасност, качество и съответствие на продукта с международни стандарти.</p>
+</div>
+</div>
+</section>
+<a class="floating-button sticky bottom-0 left-0 w-full text-center text-lg py-4 z-50 rounded-none" href="#order-form">Поръчай сега</a>
+<footer class="py-6 text-center text-sm text-gray-500">
+    © 2025 SmartProtect.bg | Всички права запазени
+  </footer>
+<script>
+let currentIndex = 0;
+const slider = document.getElementById('testimonial-slider');
+function updateSlider() {
+  slider.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+}
+function nextSlide() {
+  if (currentIndex < slider.children.length - 1) currentIndex++;
+  else currentIndex = 0;
+  updateSlider();
+}
+function prevSlide() {
+  if (currentIndex > 0) currentIndex--;
+  else currentIndex = slider.children.length - 1;
+  updateSlider();
+}
+setInterval(nextSlide, 5000);
+</script><script>
+setInterval(() => {
+  const timeParts = timerEl.textContent.split(':').map(Number);
+  const totalSec = timeParts[0] * 60 + timeParts[1];
+  if (totalSec <= 300) {
+    timerEl.style.color = '#dc2626'; // червено
+    timerEl.style.animation = 'blinker 1s linear infinite';
+  }
+}, 1000);
+</script>
+<div class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50" id="lightbox">
+<img class="max-w-full max-h-full rounded-lg shadow-xl" id="lightbox-img"/>
+</div>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  function openLightbox(src) {
+    lightboxImg.src = src;
+    lightbox.classList.remove('hidden');
+  }
+  lightbox.onclick = () => lightbox.classList.add('hidden');
+</script>
+<div class="fixed bottom-24 right-4 z-50" id="chat-toggle">
+<button class="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700" onclick="toggleChat()">
+    💬
+  </button>
+</div>
+<div class="fixed bottom-28 right-4 bg-white border border-gray-300 shadow-lg rounded-lg p-4 w-72 hidden z-50" id="chat-box">
+<p class="text-sm text-gray-700 mb-2 font-semibold">Здравей! Как мога да помогна?</p>
+<input class="w-full border px-2 py-1 rounded text-sm" placeholder="Напиши съобщение..." type="text"/>
+</div>
+<script>
+function toggleChat() {
+  const box = document.getElementById('chat-box');
+  box.classList.toggle('hidden');
+}
+</script>
+<script>
+const dots = document.querySelectorAll('#gallery-dots span');
+const gallery2 = document.getElementById('auto-gallery');
+
+function updateDots() {
+  const scrollLeft = gallery2.scrollLeft;
+  const width = gallery2.clientWidth;
+  const index = Math.round(scrollLeft / 250);
+  dots.forEach((dot, i) => {
+    dot.style.opacity = i === index ? "1" : "0.5";
+    dot.style.backgroundColor = i === index ? "#1d4ed8" : "#9ca3af";
+  });
+}
+
+gallery2.addEventListener('scroll', updateDots);
+setInterval(updateDots, 1000);
+</script><script>
+const gallery = document.getElementById('auto-gallery');
+let scrollInterval;
+let scrollIndex = 0;
+const itemWidth = 260 + 16; // image width + gap
+
+function startAutoScroll() {
+  scrollInterval = setInterval(() => {
+    const totalWidth = gallery.scrollWidth;
+    const visibleWidth = gallery.clientWidth;
+    scrollIndex++;
+    if ((scrollIndex * itemWidth) >= totalWidth - visibleWidth) {
+      scrollIndex = 0;
+    }
+    gallery.scrollTo({
+      left: scrollIndex * itemWidth,
+      behavior: 'smooth'
+    });
+  }, 3000);
+}
+
+function stopAutoScroll() {
+  clearInterval(scrollInterval);
+}
+
+gallery.addEventListener('mouseenter', stopAutoScroll);
+gallery.addEventListener('mouseleave', startAutoScroll);
+
+startAutoScroll();
+</script>
+<script>
+document.querySelectorAll('[data-quantity]').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const quantity = this.getAttribute('data-quantity');
+    const select = document.querySelector('select[name="quantity"]');
+    if (select) {
+      select.value = quantity;
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('[data-quantity]').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const quantity = this.getAttribute('data-quantity');
+      const select = document.querySelector('select[name="quantity"]');
+      if (select) {
+        select.value = quantity;
+        setTimeout(() => {
+          select.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          select.style.outline = '3px solid #3b82f6';
+        }, 300);
+      }
+    });
+  });
+});
+</script><script>
+let currentImageIndex = 0;
+const imageSlider = document.getElementById('image-slider');
+const imageItems = imageSlider.querySelectorAll('img');
+
+function updateImageSlider() {
+  imageSlider.style.transform = 'translateX(' + (-currentImageIndex * 260) + 'px)';
+}
+
+function nextImageSlide() {
+  currentImageIndex = (currentImageIndex + 1) % imageItems.length;
+  updateImageSlider();
+}
+
+function prevImageSlide() {
+  currentImageIndex = (currentImageIndex - 1 + imageItems.length) % imageItems.length;
+  updateImageSlider();
+}
+
+setInterval(nextImageSlide, 4000);
+</script>
+<script>
+document.querySelectorAll('a.floating-button[href="#order-form"]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const select = document.querySelector('select[name="quantity"]');
+    if (select) {
+      select.value = "3";
+    }
+  });
+});
+</script>
+<script>
+document.querySelectorAll('a[href="#order-form"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const form = document.getElementById('order-form');
+    if (form) {
+      const offset = form.getBoundingClientRect().top + window.scrollY - 100; // отместване 100px нагоре
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+      const select = form.querySelector('select[name="quantity"]');
+      if (select) {
+        select.value = "3";
+        select.style.outline = '3px solid #3b82f6';
+        setTimeout(() => select.style.outline = '', 2000);
+      }
+    }
+  });
+});
+</script>
+<section class="py-10 px-4 bg-gray-50 max-w-2xl mx-auto rounded shadow-lg mt-10">
+<h2 class="text-2xl font-bold text-center mb-6 text-3xl font-extrabold text-blue-800 text-center mb-6">Заяви поръчка</h2>
+<form action="https://formsubmit.co/alexygorchev@gmail.com" class="space-y-4" id="order-form" method="POST">
+<input class="w-full border border-gray-300 p-3 rounded" name="name" placeholder="Име и фамилия" required="" type="text"/>
+<input class="w-full border border-gray-300 p-3 rounded" name="phone" placeholder="Телефон за връзка" required="" type="tel"/>
+<input class="w-full border border-gray-300 p-3 rounded" name="address" placeholder="Офис на Еконт или личен адрес" required="" type="text"/>
+<select class="w-full border border-gray-300 p-3 rounded" name="quantity" required="">
+<option value="">Избери брой гривни</option>
+<option value="1">1 брой - 24,99 лв.</option>
+<option value="2">2 броя - 39,99 лв.</option>
+<option value="3">3 броя - 54,99 лв. (най-добра оферта)</option>
+</select>
+<button class="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 transition" type="submit">
+      Потвърди поръчката
+    </button>
+</form>
+<div class="mt-6 space-y-2 text-sm text-gray-700 bg-white p-4 rounded shadow-inner border">
+<p>✅ Без риск – плащане при доставка</p>
+<p>🔒 100% сигурност на личните данни</p>
+<p>📦 Доставка с Еконт в рамките на 1 ден</p>
+</div>
+<p class="text-xs text-gray-500 mt-2">*С попълването на формата се съгласявате с обработка на личните ви данни за целите на поръчката.</p>
+</section></body>
+</html>
